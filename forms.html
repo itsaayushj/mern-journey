@@ -6,19 +6,51 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="index.php">
+    <form action="index.php" method="post" enctype="multipart/form-data" >
         <label for="username">username:</label>
         <input id="username" type="text" required minlength="6" maxlength="12" placeholder="Spongebob">
         <br>
         <label for="password">password:</label>
-        <input type="password" id="password" type="text" required minlength="6" maxlength="30" placeholder="Please no 12345">
+        <input type="password" id="password"  required minlength="6" maxlength="30" placeholder="Please no 12345">
         <br>
         <label for="email">email:</label>
         <input type="email" id="email">
         <br>
+        <label for="phone">Phone Number :</label>
         <input type="tel" id="phone" placeholder="Phone number here" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
         <br>
+        <label for="bday"> Date of birth:</label>
+        <input type="date" id = "bday">
+        <br>
+        <!-- value sets a default value -->
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" placeholder="quantity" min="0" max="100" value="1"><br> 
+        <input type="radio" id="mr" name="title" value="Mr." ">
+        <label for="mr">Mr.</label>
+        <input type="radio" name="title" id="ms" value="Ms.">
+        <label for="ms">Ms.</label>
+        <input type="radio" name="title" id="dr" value="Dr.">
+        <label for="dr">Dr.</label>
+        <br>
+        <label for="payment">Payment option:</label>
+        <select name="payment" id="payment" >
+            <option value="visa">Visa</option>
+            <option value="mastercard">mastercard</option>
+            <option value="upi">UPI</option>
+            <option value="ebanking">E-Banking</option>
+        </select>
+        <br>
+        <label for="checkbox">Are you a human?</label>
+        <input type="checkbox" name="checkbox" id="checkbox">
+        <br>
+        <label for="comments">Additional comments:</label>
+        <textarea name="comments" id="comments" placeholder="Type your additional comments here" rows="2" cols="30"></textarea>
+        <br>
+        <label for="docs">Submit your documents:</label>
+        <input type="file" name="docs" id="docs" accept="image/png , image/jpeg">
+        <br>
         <input type="reset"> 
+        
         <br>
         <input type="submit" value="Submit">
     </form>
