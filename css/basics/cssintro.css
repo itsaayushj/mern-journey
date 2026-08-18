@@ -1,0 +1,16 @@
+body{
+    background-color: #2b2e2a;
+}
+h1{
+    color: pink;
+}
+.odd{
+    color: cyan;
+}
+.even{
+    color: peru;
+}
+#last_p{
+    color: yellow;
+}
+    

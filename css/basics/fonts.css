@@ -1,0 +1,14 @@
+@font-face {
+    src: url(css/basics/fonts/ArchivoBlack-Regular.ttf);
+    font-family: ArchivoBlack ;
+}
+h1{
+    font-family: ArchivoBlack , Arial;
+}
+p{
+    font-family: "Archivo Black", sans-serif;
+    font-size: 1em;
+    /* 1em = 100% */
+    font-weight: bold;
+    font-style: italic;
+}
