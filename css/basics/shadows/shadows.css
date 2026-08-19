@@ -1,0 +1,9 @@
+h1{
+    text-shadow: 5px 5px 5px red , -3px -3px 5px palevioletred  ;
+}
+#box1{
+    background-color: gray;
+    width: 150px;
+    height: 150px;
+    box-shadow: 5px 5px 10px red , -5px -5px 10px hotpink;
+}
