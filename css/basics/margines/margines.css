@@ -1,3 +1,20 @@
-body{
-    margin : 100px;
+.box{
+    border: 3px solid black;
+    font-size : 50px;
+    width : 250px;
+    height : 250px;
+    /* text-align: center ;
+    align-content: center; */
 }
+#box1{
+    background-color: hsl(180, 20%, 44%);
+    margin : auto;
+} 
+#box2{
+    background-color: rgb(155, 130, 155);
+    margin-left: auto;
+}
+/* margine auto to keep a class in center */
+/* margine left auto will push the block to the right side */
+/* margine right auto will push the block to the left side */
+
