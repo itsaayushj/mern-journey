@@ -1,0 +1,15 @@
+#egdiv{
+    border: 2px solid black;
+    height: 70px;
+    overflow: auto;
+    
+        }
+
+/* 
+overflow : visible // overflow is visible
+overflow : hidden // overflow text is completely hidden
+overflow : clip // amount of overflow can be controlled 
+                    with the help of overflow-clip-margin
+overflow : scroll // adds a scroll bar 
+overflow : auto // adds a scroll bar only when needed 
+*/

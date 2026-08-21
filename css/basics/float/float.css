@@ -1,4 +1,13 @@
 body{
-    width: 300px;
-    margin-left: auto;
+    border: 2px dotted black;
+    display: flow-root; 
+    /* display flow root so it dont glitch outside body when using float */
+}
+#img1{
+    float: left;
+    margin-right: 10px ;
+}
+#img2{
+    float: right;
+    margin-left: 10px;
 }

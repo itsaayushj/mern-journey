@@ -1,0 +1,23 @@
+#div1{
+    background-color: rgb(73, 160, 144);
+    height: 100px;
+    width: 100px;
+    display: inline;
+    /* can turn a block to inline and other way around  */
+    /* height and width dont apply to inline  */
+
+}
+#hidden{
+    background-color: rgb(73, 160, 144);
+    visibility: hidden; 
+    /* visiblity hidden still takes up space  */
+    display: none;
+    /* display none make it disapear and dont take any space */
+}
+#span1{
+    background-color: hotpink;
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+    /* when using inline block the object is inline but we can apply height and width  */
+}   
