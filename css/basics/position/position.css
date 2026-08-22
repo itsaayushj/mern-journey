@@ -1,0 +1,28 @@
+#box1{
+    width: 200px;
+    height: 200px;
+    background-color: cyan;
+    /* position : relative; */
+    /* top: 20px;
+    left: 100px; */
+    /* position: fixed;  */
+    /* it is now fixed in top left corner in top left corner in the browser */
+    /* right: 0px;
+    bottom: 1px; */
+    /* now at bottom right corner  */
+    /* position: sticky;
+    top: 1px; */
+    /* sticky only works if there is a top/bottom/left/right mentioned too  */
+    position: static;
+    /* static is the default  */
+}
+
+#box2{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(210, 0, 0);
+    position: absolute;
+    /* nearest ancestor */
+    left: 50px;
+    top: 50px;
+}

@@ -1,0 +1,21 @@
+.box{
+    border: 2px solid;
+    height: auto;
+    width: 50%;
+    float : left;
+    padding: 25px;
+    /* 50% in width wont work as there is border too and that takes space too */
+    /* thats why we use box-sizing: border-box */
+    text-align: center;
+    max-width: 25%;
+    background-color: aqua;
+
+}
+*{
+    box-sizing: border-box;
+}
+/*  * means for all elements */
+.container{
+    background-color: pink;
+    height: 500px;
+}
