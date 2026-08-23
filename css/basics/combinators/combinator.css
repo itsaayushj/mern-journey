@@ -1,0 +1,7 @@
+#container{
+    border: 2px solid;
+}
+#container p{
+    /* descendent.....nothing,just a space*/
+    background-color: aqua;
+}
