@@ -1,0 +1,15 @@
+a:link {
+    color: rgb(99, 165, 188);
+}
+
+a:visited {
+    color: rgb(37, 130, 161);
+}
+a:hover {
+    color: red;
+    font-size: 1.1em;
+}
+a:active {
+    color: purple;
+    font-size: 1.5em;
+}

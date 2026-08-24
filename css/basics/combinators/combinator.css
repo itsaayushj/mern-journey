@@ -1,7 +1,24 @@
 #container{
     border: 2px solid;
 }
-#container p{
-    /* descendent.....nothing,just a space*/
+/* #container p{
+    descendent.....nothing,just a space
+    all descendent of container
     background-color: aqua;
-}
+} */
+
+/* 
+#container > p{
+    background-color: aqua;
+} */
+/* paragraph 3 is not highlighted as its not a 'child' or direct descendent of container  */
+
+/* #container ~ *{
+    background-color: aqua;
+} */
+/* all sibling of container */
+
+/* #container + p{
+    background-color: aqua;
+} */
+/* nearest sibling of container */
