@@ -1,0 +1,439 @@
+PHP Practical Programs
+
+1. Environment Setup & Print “Hello World”
+
+<?php
+
+// Display current PHP configuration details
+phpinfo();
+
+// Print Hello World in bold
+echo "<b>Hello World</b>";
+
+?>
+
+---
+
+2. Formatted Output
+
+<?php
+
+$name = "Aayush";
+$roll_number = 101;
+$course = "BCA";
+
+// Display student details using echo and string concatenation
+echo "<table border='1' cellpadding='10'>";
+echo "<tr>";
+echo "<th>Student Name</th>";
+echo "<th>Roll Number</th>";
+echo "<th>Course</th>";
+echo "</tr>";
+
+echo "<tr>";
+echo "<td>" . $name . "</td>";
+echo "<td>" . $roll_number . "</td>";
+echo "<td>" . $course . "</td>";
+echo "</tr>";
+
+echo "</table>";
+
+?>
+
+---
+
+3. Arithmetic Operations & Variable Swapping
+
+<?php
+
+$a = 15;
+$b = 4;
+
+echo "<h3>Before Swapping</h3>";
+echo "a = " . $a . "<br>";
+echo "b = " . $b . "<br><br>";
+
+// Arithmetic operations
+echo "Sum = " . ($a + $b) . "<br>";
+echo "Difference = " . ($a - $b) . "<br>";
+echo "Product = " . ($a * $b) . "<br>";
+echo "Quotient = " . ($a / $b) . "<br>";
+echo "Remainder = " . ($a % $b) . "<br><br>";
+
+// Swapping without a third variable
+$a = $a + $b;
+$b = $a - $b;
+$a = $a - $b;
+
+echo "<h3>After Swapping</h3>";
+echo "a = " . $a . "<br>";
+echo "b = " . $b . "<br>";
+
+?>
+
+---
+
+4. Odd/Even & Divisibility Checker
+
+<?php
+
+$number = 30;
+
+// Check whether number is even or odd
+if ($number % 2 == 0) {
+    echo $number . " is Even.<br>";
+} else {
+    echo $number . " is Odd.<br>";
+}
+
+// Check divisibility by 3 and 5
+if ($number % 3 == 0 && $number % 5 == 0) {
+    echo $number . " is divisible by both 3 and 5.";
+} elseif ($number % 3 == 0) {
+    echo $number . " is divisible only by 3.";
+} elseif ($number % 5 == 0) {
+    echo $number . " is divisible only by 5.";
+} else {
+    echo $number . " is divisible by neither 3 nor 5.";
+}
+
+?>
+
+---
+
+5. Grade Calculator
+
+<?php
+
+// Subject marks
+$subject1 = 85;
+$subject2 = 92;
+$subject3 = 78;
+$subject4 = 88;
+$subject5 = 90;
+
+// Calculate total and percentage
+$total = $subject1 + $subject2 + $subject3 + $subject4 + $subject5;
+$percentage = $total / 5;
+
+// Calculate grade
+if ($percentage >= 90) {
+    $grade = "A+";
+} elseif ($percentage >= 80) {
+    $grade = "A";
+} elseif ($percentage >= 70) {
+    $grade = "B";
+} elseif ($percentage >= 60) {
+    $grade = "C";
+} else {
+    $grade = "Fail";
+}
+
+// Display result
+echo "<h3>Subject-wise Marks</h3>";
+
+echo "Subject 1: " . $subject1 . "<br>";
+echo "Subject 2: " . $subject2 . "<br>";
+echo "Subject 3: " . $subject3 . "<br>";
+echo "Subject 4: " . $subject4 . "<br>";
+echo "Subject 5: " . $subject5 . "<br><br>";
+
+echo "Total Marks: " . $total . " / 500<br>";
+echo "Percentage: " . $percentage . "%<br>";
+echo "Grade: " . $grade;
+
+?>
+
+---
+
+6. Day of the Week — switch...case
+
+<?php
+
+$dayNumber = 3;
+
+switch ($dayNumber) {
+    case 1:
+        echo "Monday";
+        break;
+
+    case 2:
+        echo "Tuesday";
+        break;
+
+    case 3:
+        echo "Wednesday";
+        break;
+
+    case 4:
+        echo "Thursday";
+        break;
+
+    case 5:
+        echo "Friday";
+        break;
+
+    case 6:
+        echo "Saturday";
+        break;
+
+    case 7:
+        echo "Sunday";
+        break;
+
+    default:
+        echo "Invalid day number. Please enter a number from 1 to 7.";
+}
+
+?>
+
+---
+
+7. Loops — Multiplication Table & Pattern Printing
+
+a. Multiplication Table
+
+<?php
+
+$n = 7;
+
+echo "<h3>Multiplication Table of $n</h3>";
+
+for ($i = 1; $i <= 10; $i++) {
+    echo $n . " x " . $i . " = " . ($n * $i) . "<br>";
+}
+
+?>
+
+b. Right-Angled Triangle Pattern
+
+<?php
+
+for ($i = 1; $i <= 5; $i++) {
+
+    for ($j = 1; $j <= $i; $j++) {
+        echo "* ";
+    }
+
+    echo "<br>";
+}
+
+?>
+
+Output:
+
+*
+* *
+* * *
+* * * *
+* * * * *
+
+---
+
+8. Factorial & Fibonacci Series
+
+a. Factorial using while loop
+
+<?php
+
+$num = 5;
+$factorial = 1;
+$i = 1;
+
+while ($i <= $num) {
+    $factorial = $factorial * $i;
+    $i++;
+}
+
+echo "Factorial of " . $num . " = " . $factorial;
+
+?>
+
+b. First 10 Fibonacci Terms using do...while
+
+<?php
+
+$a = 0;
+$b = 1;
+$count = 1;
+
+echo "First 10 Fibonacci terms:<br>";
+
+do {
+    echo $a . " ";
+
+    $next = $a + $b;
+    $a = $b;
+    $b = $next;
+
+    $count++;
+
+} while ($count <= 10);
+
+?>
+
+Output:
+
+0 1 1 2 3 5 8 13 21 34
+
+---
+
+9. Indexed Array Operations
+
+<?php
+
+// Create an indexed array
+$array = array(25, 10, 45, 30, 15, 50, 5, 35);
+
+// Calculate sum
+$sum = 0;
+
+foreach ($array as $value) {
+    $sum += $value;
+}
+
+// Calculate average
+$average = $sum / count($array);
+
+// Find maximum and minimum without max() and min()e
+$maximum = $array[0];
+$minimum = $array[0];
+
+foreach ($array as $value) {
+
+    if ($value > $maximum) {
+        $maximum = $value;
+    }
+
+    if ($value < $minimum) {
+        $minimum = $value;
+    }
+}
+
+echo "Sum = " . $sum . "<br>";
+echo "Average = " . $average . "<br>";
+echo "Maximum = " . $maximum . "<br>";
+echo "Minimum = " . $minimum . "<br><br>";
+
+// Sort array in ascending order
+sort($array);
+
+echo "Array in ascending order:<br>";
+
+foreach ($array as $value) {
+    echo $value . "<br>";
+}
+
+?>
+
+---
+
+10. Associative Array & Key-Value Iteration
+
+<?php
+
+// Associative array containing student names and percentages
+$students = array(
+    "Aayush" => 85,
+    "Rahul" => 78,
+    "Priya" => 92,
+    "Amit" => 88,
+    "Sneha" => 81
+);
+
+// Display records in an HTML table
+echo "<table border='1' cellpadding='10'>";
+
+echo "<tr>";
+echo "<th>Student Name</th>";
+echo "<th>Percentage</th>";
+echo "</tr>";
+
+foreach ($students as $name => $percentage) {
+
+    echo "<tr>";
+    echo "<td>" . $name . "</td>";
+    echo "<td>" . $percentage . "%</td>";
+    echo "</tr>";
+}
+
+echo "</table><br>";
+
+// Find highest scorer
+$highestName = "";
+$highestPercentage = 0;
+
+foreach ($students as $name => $percentage) {
+
+    if ($percentage > $highestPercentage) {
+        $highestPercentage = $percentage;
+        $highestName = $name;
+    }
+}
+
+echo "Highest Scorer: " . $highestName . "<br>";
+echo "Percentage: " . $highestPercentage . "%";
+
+?>
+
+---
+
+11. Basic GET/POST Form Processing
+
+<?php
+
+$name = "";
+$email = "";
+$message = "";
+
+if (isset($_POST['submit'])) {
+
+    // Read values from POST
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+
+    // Welcome message
+    $message = "Welcome, " . $name . "!<br>";
+    $message .= "Your email address is: " . $email;
+}
+
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Form</title>
+</head>
+
+<body>
+
+<h2>User Information Form</h2>
+
+<form method="POST" action="">
+
+    <label>User Name:</label>
+    <input type="text" name="name" required>
+    <br><br>
+
+    <label>Email:</label>
+    <input type="email" name="email" required>
+    <br><br>
+
+    <input type="submit" name="submit" value="Submit">
+
+</form>
+
+<br>
+
+<?php
+
+if ($message != "") {
+    echo "<p>" . $message . "</p>";
+}
+
+?>
+
+</body>
+</html>
+
+End of Programs
