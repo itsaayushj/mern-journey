@@ -11,7 +11,7 @@ public class palindrome{
         int reverse = 0;
         while (n > 0) {
             i = n % 10 ; // extracting the last digit
-            reverse = reverse * 10 + i;
+            reverse = reverse * 10 + i; // adding the last digit 
             n = n/ 10; // removing the 2 digit 
         } 
         if (original == reverse) { 
